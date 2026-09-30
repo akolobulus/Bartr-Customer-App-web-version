@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Rency';
+  src: url('/fonts/rency.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/fonts/space_grotesk.ttf') format('truetype');
+  font-weight: 300 700;
+  font-style: normal;
+}
+
+:root {
+  --font-rency: 'Rency', system-ui, sans-serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-space: 'Space Grotesk', system-ui, sans-serif;
+  --bartr-blue: #0067F5;
+  --bartr-blue-s2: #0A2E65;
+  --bartr-blue-t4: #E1F6FF;
+  --bartr-green-t4: #ECFBEC;
+  --bartr-yellow-t4: #FFFFEE;
+  --bartr-backdrop: #F5F6FA;
+  --bartr-ink: #0A2E65;
+  --bartr-ink-soft: #5B6472;
+}
+
+body {
+  font-family: var(--font-inter);
+  margin: 0;
+  padding: 0;
+  background-color: #f1f5f9;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.font-rency {
+  font-family: var(--font-rency);
+}
+
+.font-space {
+  font-family: var(--font-space);
+}
+
+/* Custom scrollbars for a clean mobile feel */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(10, 46, 101, 0.15);
+  border-radius: 9999px;
+}
+
+/* Leaflet custom map markers styling */
+.bartr-custom-marker {
+  background: transparent;
+  border: none;
+}
