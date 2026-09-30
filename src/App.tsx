@@ -33,6 +33,7 @@ import { BartrNameLogo } from './components/BartrComponents';
 import { BartrSidebar } from './components/BartrSidebar';
 import { VoiceButton } from './components/VoiceButton';
 import { LiveVoiceSheet } from './components/LiveVoiceSheet';
+import { Analytics } from "@vercel/analytics/next";
 
 export const App: React.FC = () => {
   const [screenStack, setScreenStack] = useState<BartrScreen[]>([{ name: 'splash' }]);
@@ -422,6 +423,9 @@ export const App: React.FC = () => {
           })()}
         </div>
       </main>
+
+      {/* Vercel Analytics */}
+      <Analytics />
     </div>
   );
 };

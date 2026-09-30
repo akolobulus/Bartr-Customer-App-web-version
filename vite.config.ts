@@ -151,6 +151,11 @@ Always return a JSON object with { "text": "...", "action": {...} or null, "grou
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), geminiApiPlugin()],
+  resolve: {
+    alias: {
+      '@vercel/analytics/next': '@vercel/analytics/react',
+    },
+  },
   server: {
     host: '0.0.0.0',
     port: 3000,
